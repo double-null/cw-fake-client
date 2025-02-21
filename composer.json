@@ -1,0 +1,10 @@
+{
+    "name": "double-null/cw-hack",
+    "autoload": {
+        "psr-4": {"CW\\": "src"},
+        "files": ["bootstrap/app.php"]
+    },
+    "require": {
+        "symfony/dotenv": "^6.4"
+    }
+}
