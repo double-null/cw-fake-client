@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace CW\Modules\Client\Actions;
 
@@ -36,9 +36,9 @@ class Reputation
 
         $vote = new \stdClass();
         $vote->status = $status;
-        $vote->quantity = ($status) ? $response['quantity'] : 0;
+        $vote->quantity = ($status) ? $response['new_repa'] : 0;
         $vote->message = $response['message'] ?? '';
-        $vote->code = VoteCode::from($response['result'] ?? 0);
+        $vote->code = VoteCode::from($response['result'] ?? -1);
         return $vote;
     }
 }
