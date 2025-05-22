@@ -1,12 +1,16 @@
 {
     "name": "double-null/cw-fake-client",
+    "description": "Fake Client for CW",
+    "type": "library",
     "autoload": {
         "psr-4": {"CW\\": "src"}
     },
     "require": {
+        "php": "^8.0",
         "symfony/dotenv": "^6.4",
         "doctrine/orm": "*",
         "doctrine/dbal": "*",
         "symfony/cache": "*"
-    }
+    },
+    "license": "MIT"
 }
