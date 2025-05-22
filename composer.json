@@ -12,5 +12,6 @@
         "doctrine/dbal": "*",
         "symfony/cache": "*"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "minimum-stability": "dev"
 }
