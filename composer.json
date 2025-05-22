@@ -6,7 +6,7 @@
         "psr-4": {"CW\\": "src"}
     },
     "require": {
-        "php": "^8.0",
+        "php": ">=8.1",
         "symfony/dotenv": "^6.4",
         "doctrine/orm": "*",
         "doctrine/dbal": "*",
