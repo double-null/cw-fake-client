@@ -1,9 +1,9 @@
 <?php
 
-namespace CW\Modules\Client\Actions;
+namespace CW\Actions;
 
 use CW\Core\OpenBox;
-use CW\Modules\Client\Services\Request;
+use CW\Services\Request;
 
 class Profile
 {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace CW\Modules\Client\Enums;
+namespace CW\Enums;
 
 enum VoteCode : int
 {

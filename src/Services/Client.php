@@ -1,6 +1,6 @@
 <?php
 
-namespace CW\Modules\Client\Services;
+namespace CW\Services;
 
 use Exception;
 

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace CW\Modules\Client\Services;
+namespace CW\Services;
 
 class Signature
 {

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace CW\Modules\Client\Actions;
+namespace CW\Actions;
 
 use CW\Core\OpenBox;
-use CW\Modules\Client\Enums\VoteCode;
-use CW\Modules\Client\Services\Request;
+use CW\Enums\VoteCode;
+use CW\Services\Request;
 
 class Reputation
 {
@@ -32,11 +32,10 @@ class Reputation
             ->run();
 
         $response = json_decode($response['body'] ?? '', true);
-        $status = $response['status'] ?? false;
 
         $vote = new \stdClass();
-        $vote->status = $status;
-        $vote->quantity = ($status) ? $response['new_repa'] : 0;
+        $vote->status = $response['data'] ?? false;
+        $vote->quantity = $response['new_repa'] ?? 0;
         $vote->message = $response['message'] ?? '';
         $vote->code = VoteCode::from($response['result'] ?? -1);
         return $vote;
