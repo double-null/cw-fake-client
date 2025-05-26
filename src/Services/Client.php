@@ -27,7 +27,7 @@ class Client
     public static function __callStatic(string $name, array $arguments) : object
     {
         $action = ucfirst($name);
-        $actionClass = "CW\\Modules\\Client\\Actions\\$action";
+        $actionClass = "CW\\Actions\\$action";
         if (class_exists($actionClass)) {
             return new $actionClass();
         }  else {
