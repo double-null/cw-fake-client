@@ -3,18 +3,13 @@
 namespace CW\Services;
 
 use Exception;
+use CW\Core\OpenBox;
 
 class Client
 {
-    /**
-     * Инициализация действия
-     * @param string $action
-     * @return mixed
-     */
-    public static function makeAction(string $action) : object
+    public function __construct(?string $server = null)
     {
-        $actionClass = "CW\\Modules\\Client\\Actions\\$action";
-        return new $actionClass();
+        OpenBox::set('server', $server ?? 'http://gw-01.contractwarsgame.com');
     }
 
     /**

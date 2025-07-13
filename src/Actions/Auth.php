@@ -7,8 +7,6 @@ use CW\Services\Request;
 
 class Auth
 {
-    private string $url = "http://gw-01.contractwarsgame.com/";
-
     /**
      * Залогинивание пользователя
      * @param string $name
@@ -29,8 +27,8 @@ class Auth
             'expire' => $time,
             'sig' => md5(uniqid()),
         ];
-
-        $url = "{$this->url}?".http_build_query($query);
+        
+        $url = OpenBox::get('server')."?".http_build_query($query);
 
         $response = Request::create()
             ->setUrl($url)

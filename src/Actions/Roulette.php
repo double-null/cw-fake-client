@@ -14,7 +14,7 @@ class Roulette
      * Запуск прокручивания рулетки
      * @return mixed награда выпавшая при прокрутке
      */
-    public function roll() : string
+    public function roll() : mixed
     {
         $time = time() + 3600;
         $query = [
@@ -23,7 +23,7 @@ class Roulette
             'sig' => md5(uniqid(rand(), true)),
         ];
 
-        $url = "{$_ENV['TARGET_URL']}?".http_build_query($query);
+        $url = OpenBox::get('server')."?".http_build_query($query);
 
         $response = Request::create()
             ->setUrl($url)

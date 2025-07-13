@@ -24,7 +24,7 @@ class Reputation
             'sig' => md5(uniqid()),
         ];
 
-        $url = $_ENV['TARGET_URL'].'?'.http_build_query($query);
+        $url = OpenBox::get('server').'?'.http_build_query($query);
 
         $response = Request::create()
             ->setUrl($url)

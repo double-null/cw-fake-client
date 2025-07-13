@@ -16,7 +16,7 @@ class Profile
             'sig' => md5(uniqid()),
         ];
 
-        $url = "{$_ENV['TARGET_URL']}?".http_build_query($query);
+        $url = OpenBox::get('server')."?".http_build_query($query);
 
         $postData = gzcompress(json_encode([
             'data' => [
