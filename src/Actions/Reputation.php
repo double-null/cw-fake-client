@@ -3,8 +3,8 @@
 namespace CW\Actions;
 
 use CW\Core\OpenBox;
+use CW\Core\Request;
 use CW\Enums\VoteCode;
-use CW\Services\Request;
 
 class Reputation
 {

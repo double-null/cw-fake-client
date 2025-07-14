@@ -1,9 +1,9 @@
 <?php
 
-namespace CW\Services;
+namespace CW;
 
-use Exception;
 use CW\Core\OpenBox;
+use Exception;
 
 class Client
 {

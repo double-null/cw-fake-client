@@ -3,7 +3,7 @@
 namespace CW\Actions;
 
 use CW\Core\OpenBox;
-use CW\Services\Request;
+use CW\Core\Request;
 
 class Clan
 {
